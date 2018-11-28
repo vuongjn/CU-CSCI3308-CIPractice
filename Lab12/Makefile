@@ -23,7 +23,8 @@ geometry.o: geometry.c geometry.h
 	$(CC) $(CFLAGS) $< -o $@
 
 dep:
-	sudo apt-get install check
+	sudo apt-get update
+	suod apt-get install check
 
 clean:
 	$(RM) *.o
@@ -31,4 +32,4 @@ clean:
 	$(RM) *~
 
 test: geometry_test
-		./geometry_test
+	./geometry_test
